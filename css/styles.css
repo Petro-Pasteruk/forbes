@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Tabular';
+    src: url('../fonts/Tabular-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    max-width: 635px;
+    margin: 0 auto;
+}
+
+#wrapper {
+    min-height: 100%;
+    padding-bottom: 235px;
+}
+
+/* Header */
+.header {}
+
+/* \Header */
+
+
+/* Footer */
+#footer {
+    height: 235px;
+    margin-top: -235px;
+}
