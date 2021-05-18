@@ -1,3 +1,13 @@
+.main--article:hover .article__title,
+.article:hover .article__title {
+    text-decoration: underline;
+}
+
+.main--article a,
+.article a {
+    text-decoration: none;
+}
+
 /* Main Article */
 .main--article {
     margin-bottom: 20px;

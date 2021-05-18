@@ -33,14 +33,9 @@ body {
     background: #fff;
 }
 
-.main--article:hover .article__title,
-.article:hover .article__title {
-    text-decoration: underline;
-}
-
-.main--article a,
-.article a {
-    text-decoration: none;
+.article.hidden,
+.main--article.hidden {
+    display: none;
 }
 
 #wrapper {

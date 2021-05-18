@@ -62,3 +62,19 @@
     font-weight: 700;
     margin-bottom: 12px;
 }
+
+.article__article {
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: "Georgia", serif;
+    padding: 0 10px;
+}
+
+.article__article p {
+    margin-top: 20px;
+}
+
+.article__article p.strong {
+    font-weight: 700;
+}
