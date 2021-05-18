@@ -45,3 +45,23 @@ document.querySelectorAll(".nav__item").forEach((item, index) => {
         closeMenu();
     });
 });
+
+function searchBlockClose () {
+    document.querySelector("body").style.overflow = "initial";
+    document.querySelector("html").style.overflow = "initial";
+    document.querySelector(".search").classList.remove("visible");
+}
+
+document.querySelector(".header__search-btn").addEventListener("click", function () {
+    const searchBlock = document.querySelector(".search");
+
+    if (searchBlock.classList.contains("visible")) {
+        searchBlockClose();
+    } else {
+        document.querySelector("body").style.overflow = "hidden";
+        document.querySelector("html").style.overflow = "hidden";
+        document.querySelector(".search").classList.add("visible");
+    }
+});
+
+document.querySelector(".search__close").addEventListener("click", searchBlockClose);
