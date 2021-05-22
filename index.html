@@ -18,7 +18,7 @@
     <img src="img/logo.png" alt="logotype" class="search__logo">
     <button class="search__close"><img src="img/close_icon.svg" alt="close icon"></button>
     <div class="search__input-wrap">
-        <input type="text" class="search__input" placeholder="Поиск">
+        <input type="text" class="search__input data__input" placeholder="Поиск">
         <button class="search__submit"><img src="img/arrow_right.svg" alt="arrow"></button>
     </div>
 </div>
@@ -29,9 +29,7 @@
             <div class="burger__wrap">
                 <div class="burger"></div>
             </div>
-            <a href="/" class="header__logo">
-                <img src="img/logo.png" alt="logotype">
-            </a>
+            <a href="index.html" class="header__logo">Победители Лотерей</a>
         </div>
         <button class="header__search-btn">
             <img src="img/icon_search.svg" alt="search icon">
@@ -39,12 +37,31 @@
     </header>
     <nav class="nav">
         <ul class="nav__list">
-            <li class="nav__item">Жизнь после выигрыша</li>
-            <li class="nav__item">Интервью после выигрыша</li>
-            <li class="nav__item">Победители</li>
-            <li class="nav__item">Рассказы победителей</li>
+            <li class="nav__item"><a href="index.html">Жизнь после выигрыша</a></li>
+            <li class="nav__item"><a href="index.html">Интервью после выигрыша</a></li>
+            <li class="nav__item"><a href="index.html">Победители</a></li>
+            <li class="nav__item"><a href="index.html">Рассказы победителей</a></li>
         </ul>
     </nav>
+    <main class="result">
+        <div class="container">
+            <div class="result__count">10 Результатов</div>
+            <div class="result__block">
+                <svg class="result__search-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <circle fill="none" stroke="#000" stroke-width="2" cx="8.5" cy="9" r="6"></circle>
+                    <path transform="rotate(45.001 14.922 15.421)" d="M12 14.4h5.9v2H12z"></path>
+                </svg>
+                <input type="text" class="result__input data__input" placeholder="Поиск">
+                <button class="result__submit-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path transform="rotate(-180 8.964 11)" d="M1 10h16v2H1z"></path>
+                        <path transform="rotate(134.999 14.965 13.124)" d="M11 12.1h8v2h-8z"></path>
+                        <path transform="rotate(-134.999 14.965 8.877)" d="M11 7.9h8v2h-8z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
     <main class="category">
         <article class="main--article">
             <div class="container">
@@ -136,7 +153,7 @@
 </div>
 <footer id="footer">
     <div class="container">
-        <a href="" class="footer__logo">
+        <a href="index.html" class="footer__logo">
             <img src="img/logo.png" alt="logotype">
         </a>
         <div class="footer__copyright">&copy; 2021 Forbes Media LLC. All rights Reserved.</div>

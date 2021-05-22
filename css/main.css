@@ -12,6 +12,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Blacker Display';
+    src: url('../fonts/Blacker-Display-Bold-trial.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -63,13 +70,16 @@ body {
 }
 
 .nav__item {
-    color: #f9ffe2;
     padding: 12px 14px;
-    font-size: 18px;
-    font-family: "Work Sans", sans-serif;
     cursor: pointer;
 }
 
+.nav__item a {
+    text-decoration: none;
+    color: #f9ffe2;
+    font-size: 18px;
+    font-family: "Work Sans", sans-serif;
+}
 /* \Navigation */
 
 /* Search block */
@@ -155,6 +165,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     right: 0;
+    cursor: pointer;
 }
 
 .search__submit img {
@@ -184,6 +195,7 @@ body {
     width: 30px;
     height: 30px;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .burger {
@@ -225,8 +237,11 @@ body {
 }
 
 .header__logo {
-    width: 60px;
     display: inline-block;
+    font-family: "Blacker Display", serif;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
 }
 
 .header__logo > img,
@@ -239,8 +254,70 @@ body {
     border: none;
     width: 20px;
     height: 100%;
+    cursor: pointer;
 }
 /* \Header */
+
+/* Result block */
+.result {
+    padding-top: 50px;
+    background: #fff;
+    display: none;
+}
+
+.result.visibility {
+    display: block;
+}
+
+.result__count {
+    color: #333;
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+}
+
+.result__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    border-bottom: 3px solid #333;
+}
+
+.result__search-img {
+    width: 20px;
+    height: 100%;
+}
+
+.result__input {
+    padding: 20px 0;
+    height: 100%;
+    width: 90%;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-size: 40px;
+    font-family: "Work Sans", sans-serif;
+}
+
+.result__input:focus-within,
+.result__input:focus {
+    outline: none;
+}
+
+.result__submit-btn {
+    width: 20px;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.result__submit-btn:focus {
+    outline: none;
+}
+
+.result__submit-btn > svg {}
+/* \Result block */
 
 /* Footer */
 #footer {

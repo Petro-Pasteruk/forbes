@@ -67,6 +67,11 @@
     border-bottom: 1px solid #e2e2e2;
     border-top: 1px solid #e2e2e2;
     padding: 15px;
+    margin-bottom: 20px;
+}
+
+.article:nth-last-of-type(1) {
+    margin-bottom: 0;
 }
 
 .article .article__title {
