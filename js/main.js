@@ -77,8 +77,16 @@ function searchArticles (e) {
         window.textLooking = e.target.parentElement.parentElement.querySelector(".data__input").value;
     } else if (e.target.parentElement.querySelector(".data__input")) {
         window.textLooking = e.target.parentElement.querySelector(".data__input").value;
-    } else {
+    } else if (e.target.parentElement.parentElement.querySelector(".data__input")) {
         window.textLooking = e.target.parentElement.parentElement.querySelector(".data__input").value;
+    }
+
+    if (document.querySelector(".search__input")) {
+        localStorage.setItem("textLooking" ,document.querySelector(".search__input").value);
+    }
+
+    if (localStorage.getItem("textLooking")) {
+        window.textLooking = localStorage.getItem("textLooking");
     }
 
     function lookingSuitableItems (arrayItems) {
@@ -183,17 +191,21 @@ function searchArticles (e) {
         counter = counter + articlesDesc.length - counterIdenticalElements;
     }
 
-    console.log(counter);
-
     function loadResult (arrayItems) {
         arrayItems.forEach(item => {
             if (item.classList.contains("hidden")) {
-                !item.classList.remove("hidden");
+                item.classList.remove("hidden");
+                item.style.marginBottom = "20px";
+            } else {
+                item.style.marginBottom = "20px";
             }
             if (item.querySelector(".select")) {
                 item.querySelector(".select").classList.add("hidden");
             }
             document.querySelector(".result").classList.add("visibility");
+            if (document.querySelector(".result")) {
+                localStorage.setItem("textLooking", "");
+            }
         });
     }
 
@@ -207,4 +219,11 @@ function searchArticles (e) {
 }
 
 document.querySelector(".search__submit").addEventListener("click", searchArticles);
-document.querySelector(".result__submit-btn").addEventListener("click", searchArticles);
+if (document.querySelector(".result__submit-btn")) {
+    document.querySelector(".result__submit-btn").addEventListener("click", searchArticles);
+}
+
+
+if (Boolean(localStorage.getItem("textLooking"))) {
+    document.querySelector(".search__submit").click();
+}

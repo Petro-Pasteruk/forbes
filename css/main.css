@@ -345,3 +345,23 @@ body {
     font-size: 10px;
 }
 /* \Footer */
+
+@media (max-width: 640px) {
+    .result {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .result__search-img,
+    .result__input {
+        margin-right: 10px;
+    }
+}
+@media (max-width: 500px) {
+    .result__input {
+        font-size: 30px;
+    }
+    .result {
+        padding-top: 20px;
+    }
+}

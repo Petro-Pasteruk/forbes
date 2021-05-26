@@ -23,6 +23,10 @@
     margin-bottom: 24px;
 }
 
+.select.hidden {
+    display: none;
+}
+
 .article__img {
     width: 100%;
     margin-bottom: 16px;
