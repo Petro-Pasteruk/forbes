@@ -7,7 +7,7 @@
 }
 
 .article__header {
-    background-color: #9D8D5C;
+    background-color: rgba(157, 141, 92, .8);
     padding: 20px 10px;
     text-align: center;
     color: #fff;
@@ -46,7 +46,7 @@
     font-size: 14px;
     text-align: center;
     padding: 10px 5px;
-    background-color: #07244A;
+    background-color: rgba(7, 36, 74, .8);
     color: #fff;
 }
 
