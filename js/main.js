@@ -123,7 +123,7 @@ function searchArticles (e) {
 
             arrayTextLooking.forEach(lookingText => {
                 for (let i = 0; i < arrayTitleText.length; i++) {
-                    if (lookingText.trim() !== arrayTitleText[i].trim()) {
+                    if (lookingText.trim().toLowerCase() !== arrayTitleText[i].trim().toLowerCase()) {
                         if (counter === i) {
                             textIndexSuitableOptions.forEach((item, index) => {
                                 if (item) {
@@ -192,15 +192,15 @@ function searchArticles (e) {
     }
 
     function loadResult (arrayItems) {
-        arrayItems.forEach(item => {
-            if (item.classList.contains("hidden")) {
-                item.classList.remove("hidden");
-                item.style.marginBottom = "20px";
-            } else {
-                item.style.marginBottom = "20px";
-            }
+        arrayItems.forEach((item, index) => {
+            item.classList.remove("hidden");
+            item.style.marginBottom = "20px";
             if (item.querySelector(".select")) {
                 item.querySelector(".select").classList.add("hidden");
+            }
+            if (index === 0) {
+                item.style.paddingTop = "20px";
+                item.style.borderTop = "none";
             }
             document.querySelector(".result").classList.add("visibility");
             if (document.querySelector(".result")) {
@@ -208,6 +208,9 @@ function searchArticles (e) {
             }
         });
     }
+
+    document.querySelectorAll(".main--article").forEach(article => { article.classList.add("hidden"); });
+    document.querySelectorAll(".article").forEach(article => { article.classList.add("hidden"); });
 
     loadResult(articlesDesc);
     loadResult(articlesTitle);
@@ -229,6 +232,7 @@ function searchArticles (e) {
 
     document.querySelector(".search__input").value = "";
     document.querySelector(".search").classList.remove("visible");
+    document.querySelector(".result__input").value = textLooking;
     document.querySelector("body").style.overflow = "initial";
     document.querySelector("html").style.overflow = "initial";
 }
