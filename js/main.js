@@ -212,6 +212,21 @@ function searchArticles (e) {
     loadResult(articlesDesc);
     loadResult(articlesTitle);
 
+    if (articlesDesc.length === 0 && articlesTitle.length === 0 || textLooking === "" || textLooking === " ") {
+        document.querySelectorAll(".main--article").forEach(item => {
+            item.classList.add("hidden");
+        });
+        document.querySelectorAll(".article").forEach(item => {
+            item.classList.add("hidden");
+        });
+
+        document.querySelector(".result").classList.add("visibility");
+        document.querySelector(".result__no-result").classList.add("visibility");
+        document.querySelector(".result__text-looking").textContent = textLooking;
+    } else {
+        document.querySelector(".result__no-result").classList.remove("visibility");
+    }
+
     document.querySelector(".search__input").value = "";
     document.querySelector(".search").classList.remove("visible");
     document.querySelector("body").style.overflow = "initial";

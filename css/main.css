@@ -316,7 +316,23 @@ body {
     outline: none;
 }
 
-.result__submit-btn > svg {}
+.result__no-result {
+    margin-top: 15px;
+    padding-bottom: 30px;
+    color: #921128;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    display: none;
+}
+
+.result__no-result.visibility {
+    display: block;
+}
+
+.result__text-looking {
+    font-weight: bold;
+    display: inline-block;
+}
 /* \Result block */
 
 /* Footer */
